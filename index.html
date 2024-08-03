@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur Effect on Hover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            padding: 10px;
+/*             width: 667px; */
+            background-color: #f9f9fa;
+            color: #000;
+            font-family: "Inter Tight", sans-serif;
+        }
+
+        h1, h2 {
+            font-weight: 800;
+            text-align: center;
+        }
+
+        h1 {
+            color: #181818;
+            font-size: 32px;
+            margin-top: 10px;
+            margin-bottom: -14px;
+        }
+
+        h2 {
+            color: #181818;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 20px 20px -8px;
+            text-align: left;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+			font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 7px;
+            padding: 7px 0;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .118);
+            margin-bottom: 22px;
+            overflow: hidden;
+        }
+
+        .section hr {
+            border: 1px solid #e1e1e1;
+        }
+
+        .banner {
+            width: 100%;
+            margin-top: -10px;
+        }
+
+        .vidcontainer {
+            position: relative;
+            padding-bottom: 52.9%;
+            height: 0;
+            overflow: hidden;
+            margin: 25px 20px;
+            max-width: calc(100% - 40px);
+            border-radius: 7px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.191);
+        }
+
+        .vidcontainer iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .button {
+            background-color: #072f52;
+            border: none;
+            color: white;
+            width: calc(100% - 77px);
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.12s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #114878;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h1>What's This?</h1>
+        <p><b>Ultimats is a bundle of 2 of my top-rated Blender addons, Matkit and Oven, designed to supercharge your material creation and baking process. Both addons boast 5-star ratings and are packed with features to make your projects shine. Here’s a quick look at what you get:</b></p>
+    </div>
+
+    <div class="section">
+        <img src="https://i.postimg.cc/wTSCzHZH/matkit-banner2.jpg" class="banner">
+        <div class="vidcontainer">
+            <iframe src="https://www.youtube.com/embed/XRlU2zEunNg?si=6XvqqKeD2A25q1bf&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><b>Matkit is a powerful Blender addon that provides a comprehensive set of features and assets for creating outstanding and fully-customizable materials quickly and efficiently.</b></p>
+        <hr>
+        <h2>Key Features</h2>
+        <ul>
+            <li>Access over 85+ professionally crafted, procedural, and customizable materials.</li>
+			<li>Add procedural effects like dust, rain droplets, cracks, and paint for enhanced realism.</li>
+            <li>Add realistic details such as fingerprints, scratches, and other imperfections to your materials for enhanced realism.</li>
+            <li>Access useful node groups such as "Vector Blur", "Advanced Brick Texture", and "Mix Normals"</li>
+			<li>Customize image textures downloaded from any texture website, with the ability to break their repetitive tiling patterns for a more natural look.</li>
+            <li>Edit and swap images within node groups directly from the side panel, avoiding the need to navigate through node groups to find image texture nodes.</li>
+            <li>Easily add and customize decals, with positioning control using empty objects.</li>
+        </ul>
+        <hr>
+        <center>
+            <a target="_parent" href="https://blendermarket.com/products/matkit"><button class="button">View Product Page</button></a>
+        </center>
+    </div>
+
+    <div class="section">
+        <img src="https://i.postimg.cc/1zLB5bH0/oven-banner.jpg" class="banner">
+        <div class="vidcontainer">
+            <iframe src="https://www.youtube.com/embed/ne2Z8OHiKX4?si=4_cMdIAAIwhFLbIz&start=98&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p><b>Oven is a versatile Blender addon that converts complex procedural materials into image textures, supporting all shader nodes and features like UDIMs and channel packing. It's designed to make the baking and exporting process to other 3D applications efficient and customizable.</b></p>
+        <hr>
+        <h2>Key Features</h2>
+        <ul>
+            <li>Bake multiple objects simultaneously for an efficient workflow.</li>
+            <li>Supports all shader nodes and all material setups.</li>
+            <li>Bake to UDIMs for high-resolution textures across multiple UV tiles.</li>
+            <li>Utilize channel packing for optimized texture memory usage.</li>
+            <li>Output baked maps as images or color attributes (vertex colors)</li>
+            <li>Customize settings for resolution, file format, and baking parameters.</li>
+            <li>Automatically create new UV maps for baking using Smart UV Project.</li>
+			<li>Bake a single shader node to an image or a color attribute.</li>
+			<li>Bake materials and normals from high-poly to low-poly objects.</li>
+		</ul>
+        <hr>
+        <center>
+            <a target="_parent" href="https://blendermarket.com/products/ovenbake"><button class="button">View Product Page</button></a>
+        </center>
+    </div>
+
+    <div class="section">
+        <h1>Who Is This For?</h1>
+        <p><b>This bundle offers something valuable for every Blender user:</b></p>
+        <ul>
+            <li><b>Architects:</b> Easily create highly customizable materials and export them to programs like Unreal Engine 5 for faster rendering or real-time architectural visualization.</li>
+            <li><b>Game Artists:</b> Quickly create materials for assets and bake them for compatibility with any game engine, or high-to-low poly baking for game optimization without compromising quality.</li>
+            <li><b>VFX Artists:</b> Easily bake procedural materials and effects for integration into visual effects pipelines, or use the surface imperfections for unmatched realism.</li>
+            <li><b>Product Designers:</b> Prototype and visualize products with customizable materials, allowing for realistic renderings and presentations.</li>
+            <li><b>Indie Developers:</b> Speed up asset creation, making it easy to polish game assets with high-quality materials and focus more on making the game itself.</li>
+            <li><b>Time-constrained People:</b> Never create materials from scratch; everything you need is available with a single click!</li>
+        </ul>
+    </div>
+
+</body>
+</html>
