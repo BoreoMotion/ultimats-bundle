@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blur Effect on Hover</title>
+    <title>Ultimats</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <style>
         body {
             padding: 10px;
+            padding-top: 0px;
 /*             width: 667px; */
             background-color: #f9f9fa;
             color: #000;
@@ -53,6 +55,8 @@
         li {
             margin-bottom: 10px;
         }
+
+
 
         .section {
             background-color: #fff;
@@ -112,9 +116,95 @@
             background-color: #114878;
         }
 
+        /* TIMER */
+        .timer {
+            background-color: #071624;
+            color: #fff;
+            margin: -20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-image: url('https://i.postimg.cc/6QhBX0vw/timer-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 0 0 10px 10px;
+        }
+
+        #demo {
+            font-family: "JetBrains Mono", monospace;, sans-serif;
+        }
+        .time-unit {
+            display: inline-block;
+            text-align: center;
+            margin-right: 20px;
+        }
+        .time-unit .number {
+            font-size: 2em;
+            font-weight: 800;
+        }
+        .time-unit .label {
+            font-size: 1em;
+            font-weight: 600;
+            color: #71a9dc;
+        }
+
     </style>
+
+    <script>
+        // Set the date we're counting down to in UTC
+        var countDownDate = new Date(Date.UTC(2024, 7, 12, 10, 00, 00)).getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+        // Get today's date and time in UTC
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Display the result in the element with id="demo"
+        document.getElementById("demo").innerHTML = 
+        `<div class="time-unit">
+            <div class="number">${days}</div>
+            <div class="label">Days</div>
+        </div>` +
+        `<div class="time-unit">
+            <div class="number">${hours}</div>
+            <div class="label">Hours</div>
+        </div>` +
+        `<div class="time-unit">
+            <div class="number">${minutes}</div>
+            <div class="label">Minutes</div>
+        </div>` +
+        `<div class="time-unit">
+            <div class="number">${seconds}</div>
+            <div class="label">Seconds</div>
+        </div>`;
+        
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+        }, 1000);
+    </script>
+
 </head>
 <body>
+    <div class="timer">
+        <center><p style="font-size: 23px; font-weight: 700; margin-bottom: -18px;">40% OFF THE TOTAL VALUE</p>
+            <p>Launch Sale Ends In:</p>
+            <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+            <p id="demo"></p>
+        </center>
+
+    </div>
     <div class="section">
         <h1>What's This?</h1>
         <p><b>Ultimats is a bundle of 2 of my top-rated Blender addons, Matkit and Oven, designed to supercharge your material creation and baking process. Both addons boast 5-star ratings and are packed with features to make your projects shine. Here’s a quick look at what you get:</b></p>
